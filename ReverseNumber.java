@@ -2,16 +2,14 @@ import java.util.Scanner;
 public class ReverseNumber{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        System.out.print("Enter the number: ");
+        int num = sc.nextInt();
+        int reverse = 0;
 
-        int r  = 0;
-        while(n != 0){
-            r *= 10;
-            r += (n%10);
-            n /= 10;
+        for(; num != 0; num = num /10){
+            int digit = num %10;
+            reverse = reverse * 10 + digit;
         }
-        System.out.println(r);
+        System.out.println("Reverse number = " +reverse);
     }
 }
-    
-
