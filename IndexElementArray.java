@@ -1,6 +1,6 @@
 import java.util.Scanner;
-public class SearchArray {
-    public static int searcharray(int arr[], int key){
+public class IndexElementArray {
+    public static int index(int arr[], int key){
         for(int i = 0; i <arr.length; i++){
             if(arr[i] == key){
                 return i;
@@ -17,13 +17,13 @@ public class SearchArray {
         for(int i = 0; i <arr.length; i++){
             arr[i] = sc.nextInt();
         }
-        System.out.println("Search Element:");
+        System.out.println("Enter the search of Element:");
         int key = sc.nextInt();
-        int result = searcharray(arr,key);
-        if(result != -1){
-            System.out.println("Element array index at index" +result);
+        int index = index(arr,key);
+        if(index != -1){
+            System.out.println("Enter the array index" +index);
         } else {
-            System.out.println("Element array does not index");
+            System.out.println("Enter the not array index:");
         }
     }
 }

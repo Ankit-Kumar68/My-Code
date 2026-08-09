@@ -1,12 +1,13 @@
 import java.util.Scanner;
-public class SearchArray {
-    public static int searcharray(int arr[], int key){
+public class CountOccurenceArray {
+    public static int Countoccurence(int arr[], int key){
+        int count = 0;
         for(int i = 0; i <arr.length; i++){
             if(arr[i] == key){
-                return i;
+                count++;
             }
         }
-        return -1;
+        return count;
     }
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -17,13 +18,9 @@ public class SearchArray {
         for(int i = 0; i <arr.length; i++){
             arr[i] = sc.nextInt();
         }
-        System.out.println("Search Element:");
+        System.out.println("Enter element to count: ");
         int key = sc.nextInt();
-        int result = searcharray(arr,key);
-        if(result != -1){
-            System.out.println("Element array index at index" +result);
-        } else {
-            System.out.println("Element array does not index");
-        }
+        int count = Countoccurence(arr,key);
+        System.out.println("Occurence of "+ key + "=" +count);
     }
 }
